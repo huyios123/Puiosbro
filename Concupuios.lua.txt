@@ -1,7 +1,7 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChanVanThanhIOS/refs/heads/main/uimain.txt")))()
 
        local Window = MakeWindow({
-         Hub = {"Pu Ios Dz",
+         Hub = {"
          Title = "Pu Ios Dz",
          Animation = "Script Tổng Hợp Ver1"
          },
