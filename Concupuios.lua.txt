@@ -5,7 +5,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
          Title = "Pu Ios Dz",
          Animation = "Script Tổng Hợp Ver1"
          },
-        Key = {"Pu"},
+        Key = {
         KeySystem = true,
         Title = "Pu Ios Dz / Scrit Tổng Hợp",
         Description = "",
