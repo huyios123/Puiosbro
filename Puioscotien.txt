@@ -9326,3 +9326,64 @@ v14:Notify({
     Content = "Tải Xong",
     Duration = 10
 });
+
+
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local player = Players.LocalPlayer
+
+-- Hàm hiển thị popup
+local function showPopup()
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = player:WaitForChild("PlayerGui")
+
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 300, 0, 150)
+    frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+    frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    frame.Parent = screenGui
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, 0, 0.5, 0)
+    textLabel.Text = "Pu IOS Dz 🍏\nNhớ Like And Subscribe"
+    textLabel.TextSize = 18
+    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Parent = frame
+
+    local buttonYT = Instance.new("TextButton")
+    buttonYT.Size = UDim2.new(0.5, -5, 0.3, 0)
+    buttonYT.Position = UDim2.new(0, 5, 0.7, 0)
+    buttonYT.Text = "Kênh YTB"
+    buttonYT.TextSize = 16
+    buttonYT.BackgroundColor3 = Color3.fromRGB(0, 150, 255)
+    buttonYT.TextColor3 = Color3.fromRGB(255, 255, 255)
+    buttonYT.Parent = frame
+
+    local buttonClose = Instance.new("TextButton")
+    buttonClose.Size = UDim2.new(0.5, -5, 0.3, 0)
+    buttonClose.Position = UDim2.new(0.5, 5, 0.7, 0)
+    buttonClose.Text = "Xong"
+    buttonClose.TextSize = 16
+    buttonClose.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+    buttonClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+    buttonClose.Parent = frame
+
+    -- Khi nhấn nút "Kênh YTB", sao chép link vào clipboard
+    buttonYT.MouseButton1Click:Connect(function()
+        setclipboard("https://www.youtube.com/@PuIosDzso1vn")
+        StarterGui:SetCore("SendNotification", {
+            Title = "Đã sao chép link!";
+            Text = "Hãy dán vào trình duyệt hoặc Google.";
+            Duration = 3;
+        })
+    end)
+
+    -- Khi nhấn "Xong", đóng popup
+    buttonClose.MouseButton1Click:Connect(function()
+        screenGui:Destroy()
+    end)
+end
+
+-- Gọi hàm hiển thị popup khi script chạy
+showPopup()
