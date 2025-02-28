@@ -9,13 +9,13 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
         KeySystem = true,
         Title = "Pu Ios Dz / Scrit Tổng Hợp",
         Description = "",
-        KeyLink = "Pu",
+        KeyLink = "https://yeumoney.com/go/ghEbJcW8",
         Keys = {"Pu"},
         Notifi = {
         Notifications = true,
         CorrectKey = "Đang Chạy Kịch Bản",
        Incorrectkey = "Mật Khẩu Không Đúng",
-       CopyKeyLink = "Đã Sao Chép"
+       CopyKeyLink = "Đã Sao Chép dán vào gg" 
       }
     }
   })
@@ -33,10 +33,10 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
      local Tab1o = MakeTab({Name = "Chức Năng"})
     
     AddButton(Tab1o, {
-     Name = "Min Gaming",
+     Name = "vxeze hub",
     Callback = function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinAE"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/VxezeHubHopBoss/refs/heads/main/SkidConCacBaM"))()
 
   end
   })
@@ -164,7 +164,11 @@ main()
     AddButton(Tab1o, {
      Name = "Trẩu Roblox",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/TrauHub/refs/heads/main/TrauV1"))()
+
+getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
             
   end
   })
@@ -204,7 +208,7 @@ game.StarterGui:SetCore("SendNotification", {
 wait(1)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Pu Ios Dz";
-    Text = "tiktok: @Huyios_isme"; -- what the text says (ofc)
+    Text = "tiktok: @puios_isme"; -- what the text says (ofc)
     Duration = 1;
 })
 _G.HeadSize = 120
@@ -644,3 +648,11 @@ end)
             
   end
   })
+
+    AddButton(Tab1o, {
+     Name = "quantum",
+    Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
+
+end})
