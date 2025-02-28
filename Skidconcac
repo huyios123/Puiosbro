@@ -162,7 +162,7 @@ main()
   })
 
     AddButton(Tab1o, {
-     Name = "Trẩu Roblox",
+     Name = "xero",
     Callback = function()
 
 getgenv().Team = "Marines"
@@ -237,7 +237,8 @@ end)
      Name = "Aim Camera",
     Callback = function()
             
-loadstring(Game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/AlexAimBot/refs/heads/main/AimBotBanTumLum.lua.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/AlexAimBot/refs/heads/main/AimBotBanTumLum.lua.txt"))()
+
             
   end
   })
