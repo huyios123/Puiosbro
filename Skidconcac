@@ -33,10 +33,10 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
      local Tab1o = MakeTab({Name = "Chức Năng"})
     
     AddButton(Tab1o, {
-     Name = "vxeze hub",
+     Name = "teddy hub mirage hub",
     Callback = function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/VxezeHubHopBoss/refs/heads/main/SkidConCacBaM"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletgojo/Haidepzai/refs/heads/main/Mirage-Teddyreal-FREE"))()
 
   end
   })
@@ -60,10 +60,11 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
   })
 
     AddButton(Tab1o, {
-     Name = "Pu Ios Dz",
+     Name = "Tboy hub",
     Callback = function()
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/huyios123/Puiosbro/refs/heads/main/Puioscotien.txt'))()
+loadstring(game:HttpGet(("http://moookiegwug.publicvm.com/Test/uploads/Scriptmade/c367f5a2af154b0aa7565c33463559f3.txt")))()
+
 
   end
   })
