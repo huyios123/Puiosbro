@@ -9,19 +9,19 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
         KeySystem = true,
         Title = "Pu Ios Dz / Scrit Tổng Hợp",
         Description = "",
-        KeyLink = "https://yeumoney.com/go/ghEbJcW8",
+        KeyLink = "Pu",
         Keys = {"Pu"},
         Notifi = {
         Notifications = true,
         CorrectKey = "Đang Chạy Kịch Bản",
        Incorrectkey = "Mật Khẩu Không Đúng",
-       CopyKeyLink = "Đã Sao Chép dán vào gg" 
+       CopyKeyLink = "Đã Sao Chép dán vào mật khẩu" 
       }
     }
   })
 
-       MinimizeButton({
-       Image = "http://www.roblox.com/asset/?id=115394226851276",
+        MinimizeButton({
+       Image = "http://www.roblox.com/asset/?id=85968328598860",
        Size = {40, 40},
        Color = Color3.fromRGB(10, 10, 10),
        Corner = true,
@@ -30,7 +30,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/VanThanhIOS/OniiChan
       })
       
 ------ Tab
-     local Tab1o = MakeTab({Name = "Chức Năng"})
+     local Tab1o = MakeTab({Name = "blox fruit"})
     
     AddButton(Tab1o, {
      Name = "teddy hub mirage hub",
@@ -175,10 +175,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs
   })
 
     AddButton(Tab1o, {
-     Name = "Văn Thành IOS",
+     Name = "cokka hub",
     Callback = function()
             
-loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/TrollVietNam/refs/heads/main/VanThanhIOS.txt"))()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua")()
             
   end
   })
@@ -658,3 +658,26 @@ end)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()
 
 end})
+
+    AddButton(Tab1o, {
+     Name = "hoho hub(có key)",
+    Callback = function()
+
+_G.HohoVersion = "v4"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()
+
+end})
+
+    AddButton(Tab1o, {
+     Name = "valcano",
+    Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wpisstestfprg/Volcano/refs/heads/main/VolcanoLocal.lua", true))()
+
+end})
+
+local Tab2o = MakeTab({Name = "mm2"})
+
+    AddButton(Tab2o, {
+     Name = "coming soon",
+    Callback = function()
