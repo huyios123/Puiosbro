@@ -1,6 +1,6 @@
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vinh12eqweaws/vvvs/refs/heads/main/caz"))()
 local Window = redzlib:MakeWindow({
-  Title = "tổng hợp ver 1",
+  Title = "ken_gamingrbl",
   SubTitle = "by Ken Gaming",
 })
 
@@ -14,7 +14,7 @@ local Discord = Window:MakeTab({
 
 Discord:AddDiscordInvite({
   Name = "ken roblox",
-  Description = "skidconcu",
+  Description = "đăng ký",
   Logo = "rbxassetid://71126433489798",
   Invite = "https://youtube.com/@puiosdzso1vn"
 })
