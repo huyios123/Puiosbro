@@ -6,12 +6,23 @@ local Window = redzlib:MakeWindow({
 
 local AFKOptions = {}
 
-local Discord = Window:MakeTab({"Youtube", "video"})
+-- Tạo Tab Discord
+local Discord = Window:MakeTab({
+  Name = "Youtube",
+  Icon = "rbxassetid://71126433489798"
+})
+
 Discord:AddDiscordInvite({
   Name = "ken roblox",
   Description = "skidconcu",
   Logo = "rbxassetid://71126433489798",
   Invite = "https://youtube.com/@puiosdzso1vn"
+})
+
+-- Tạo Tab chính
+local Tab = Window:MakeTab({
+  Name = "Main Scripts",
+  Icon = "rbxassetid://10723417131"
 })
 
 Tab:AddButton({
@@ -20,12 +31,14 @@ Tab:AddButton({
        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
   	end    
 })
+
 Tab:AddButton({
 	Name = "min hop sever",
 	Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinHopBoss"))()
   	end    
 })
+
 Tab:AddButton({
 	Name = "ak gaming",
 	Callback = function()
@@ -33,12 +46,12 @@ Tab:AddButton({
   	end    
 })
 
-local Tab2 = Window:MakeTab({ "clinet",
-	Name = "script client",
+-- Tạo Tab Client Scripts
+local Tab2 = Window:MakeTab({
+	Name = "Script Client",
 	Icon = "rbxassetid://10723417131",
 	PremiumOnly = false
 })
-
 
 Tab2:AddButton({
 	Name = "Fruit Finder",
@@ -52,27 +65,13 @@ Tab2:AddButton({
 	Name = "Arceus X",
 	Callback = function()
         repeat wait(5) until game:IsLoaded()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
-end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))()
+    end
 })
 
-Tab2:AddButton({
-	Name = "Krnl",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-      loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
-end
-})
-
-Tab2:AddButton({
-	Name = "Synapse X",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-      loadstring(game:HttpGet("https://pastebin.com/raw/QmqSgQ3K"))()
-end
-})
-
-local Tab3 = Window:MakeTab({"blox fruit",
+-- Tạo Tab Blox Fruit
+local Tab3 = Window:MakeTab({
+	Name = "Blox Fruit",
 	Icon = "rbxassetid://10723425376",
 	PremiumOnly = false
 })
@@ -81,91 +80,38 @@ Tab3:AddButton({
 	Name = "Fix Lag",
 	Callback = function()
         repeat wait(5) until game:IsLoaded()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
-end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+    end
 })
 
 Tab3:AddButton({
 	Name = "azune",
 	Callback = function()
         repeat wait(5) until game:IsLoaded()
-     getgenv().Team = "Pirates"
-getgenv().AutoLoad = false --Will Load Script On Server Hop
-getgenv().SlowLoadUi = false
-getgenv().ForceUseSilentAimDashModifier = false --Force turn on silent aim , if error then executor problem
-getgenv().ForceUseWalkSpeedModifier = false --Force turn on Walk Speed Modifier , if error then executor problem
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
-end
+        getgenv().Team = "Pirates"
+        getgenv().AutoLoad = false 
+        getgenv().SlowLoadUi = false
+        getgenv().ForceUseSilentAimDashModifier = false 
+        getgenv().ForceUseWalkSpeedModifier = false 
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
+    end
 })
 
 Tab3:AddButton({
-	Name = "xero",
+	Name = "blue x hub",
 	Callback = function()
         repeat wait(5) until game:IsLoaded()
-      getgenv().Team = "Marines"
-getgenv().Hide_Menu = false
-getgenv().Auto_Execute = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()
-end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+    end
 })
-Tab3:AddButton({
-  Name = "blue x hub",
-  Callback = function()
-        repeat wait(5) until game:IsLoaded()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
 
-local Tab4 = Window:MakeTab({"mm2",
+-- Tạo Tab MM2
+local Tab4 = Window:MakeTab({
+	Name = "MM2",
 	Icon = "rbxassetid://10734906975",
 	PremiumOnly = true
 })
-local Tab5 = Window:MakeTab({ "Tên tab",
-	Icon = "rbxassetid://10723424838",
-	PremiumOnly = true
-})
-Tab5:AddButton({
-	Name = "Farm Nhanh",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-        loadstring(game:HttpGet("https://api.realaya.xyz/v1/files/l/73mkp0aqyfo4ypy8hvl0nz10lq49fey5.lua"))()
-end
-})
-Tab5:AddButton({
-	Name = "Auto Bounty",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-        -- dán script vô
-end
-})
-Tab5:AddButton({
-	Name = "Keyboard",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-     --dán script vô
-end
-})
 
-Tab5:AddButton({
-	Name = "Chests Farm",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/ChestFarmOp"))()
-end    
-})
-
-Tab3:AddButton({
-	Name = "RTX",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-        loadstring(game:HttpGet("https://pastebin.com/raw/vmjZ4UY8"))()
-end
-})
-
-Tab3:AddButton({
-	Name = "Lụm Quả",
-	Callback = function()
-        repeat wait(5) until game:IsLoaded()
-        -- dán script vô
-end
-})
 Tab4:AddButton({
 	Name = "Royx Hub",
 	Callback = function()
@@ -174,36 +120,16 @@ Tab4:AddButton({
   	end    
 })
 
-
-
-Tab4:AddButton({
-	Name = "Trẩu Roblox",
-	Callback = function()
-         repeat wait(5) until game:IsLoaded()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/TrauHub/refs/heads/main/TrauV1"))()
-end
-})
-
-
-Tab4:AddButton({
-	Name = "Cụt Tay Hub",
-	Callback = function()
-         repeat wait(5) until game:IsLoaded()
-         loadstring(game:HttpGet('https://raw.githubusercontent.com/diemquy/CutTayHub/main/Cuttayhubreal.lua'))()
-end
-})
-
-
 Tab4:AddButton({
 	Name = "Xero Hub",
 	Callback = function()
          repeat wait(5) until game:IsLoaded()
-         getgenv().Team = "Marines" -- Pirates/Marines
-getgenv().Fix_Lag = true -- true/false
-getgenv().Auto_Execute = false -- true/false
-getgenv().Clear_Settings = false -- true/false
-loadstring(game:HttpGet("http://apixerohub.x10.mx/main.lua"))()
-end
+         getgenv().Team = "Marines" 
+         getgenv().Fix_Lag = true 
+         getgenv().Auto_Execute = false 
+         getgenv().Clear_Settings = false 
+         loadstring(game:HttpGet("http://apixerohub.x10.mx/main.lua"))()
+    end
 })
 
 Tab4:AddButton({
@@ -211,112 +137,27 @@ Tab4:AddButton({
 	Callback = function()
          repeat wait(5) until game:IsLoaded()
          loadstring(game:HttpGet("https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf"))()
-end
-})
-
-Tab4:AddButton({
-	Name = "BlackTrap Hub",
-	Callback = function()
-         repeat wait(5) until game:IsLoaded()
-          loadstring(game:HttpGetAsync("https://lua-library.btteam.net/script-auth.txt"))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Zis Roblox",
-	Callback = function()
-         repeat wait(5) until game:IsLoaded()
-         loadstring(game:HttpGet("https://raw.githubusercontent.com/giaotrinhhoc/ZisRb/refs/heads/main/ZisRbV5"))()
-  	end    
-})
-Tab4:AddButton({
-	Name = "tên script",
-	Callback = function()
-        -- dán script vô
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "tên script",
-	Callback = function()
-        -- dán script vô
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "tên script",
-	Callback = function()
-        -- dán script vô
-  	end    
+    end
 })
 
 Tab4:AddButton({
 	Name = "CFrame Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Steveee11/Scripts/main/Blox%20Fruits%20OP%20Script"))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Flare Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/flares"))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "BLCK Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/BLCK"))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Modz HUb",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/modz"))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Hoho Hub",
-	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Lol Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/neon"))()
-  	end    
+    end    
 })
 
 Tab4:AddButton({
 	Name = "Zen Hub",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader", true))()
-  	end    
-})
-
-Tab4:AddButton({
-	Name = "Uranium/Switch Hub",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumX/main/src_.lua.txt"))()
-  	end    
-})
-
-
-Tab4:AddButton({
-	Name = "Thunder Z",
-	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Mobile-Loader"))()
-  	end    
+    end    
 })
 
 Tab4:AddButton({
 	Name = "Mukuro Hub",
 	Callback = function()
-        loaloadstring(game:HttpGet("https://raw.githubusercontent.com/xDepressionx/Free-Script/main/BloxFruit.lua"))()
-  	end    
+        repeat wait(5) until game:IsLoaded()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xDepressionx/Free-Script/main/BloxFruit.lua"))()
+    end    
 })
