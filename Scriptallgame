@@ -33,7 +33,7 @@ Tab:AddButton({
   	end    
 })
 
-local Tab2 = Window:MakeTab({ "blox fruit",
+local Tab2 = Window:MakeTab({ "clinet",
 	Name = "script client",
 	Icon = "rbxassetid://10723417131",
 	PremiumOnly = false
@@ -109,16 +109,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs
 end
 })
 Tab3:AddButton({
-  Name = "",
+  Name = "blue x hub",
   Callback = function()
-        repeat ưait(5) until game:IsLoaded()
+        repeat wait(5) until game:IsLoaded()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+
 local Tab4 = Window:MakeTab({"mm2",
 	Icon = "rbxassetid://10734906975",
-	PremiumOnly = false
+	PremiumOnly = true
 })
 local Tab5 = Window:MakeTab({ "Tên tab",
 	Icon = "rbxassetid://10723424838",
-	PremiumOnly = false
+	PremiumOnly = true
 })
 Tab5:AddButton({
 	Name = "Farm Nhanh",
