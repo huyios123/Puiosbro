@@ -1,0 +1,177 @@
+local v0 = game:GetService("Players")
+local v1 = game:GetService("RunService")
+local v2 = game:GetService("UserInputService")
+local v3 = v0.LocalPlayer
+local v4 = v3.Character or v3.CharacterAdded:Wait()
+local v5 = v4:WaitForChild("Humanoid")
+local v6 = v4:WaitForChild("HumanoidRootPart")
+local v7 = workspace.CurrentCamera
+local v8 = v5:WaitForChild("Animator")
+local v9 = Instance.new("Animation")
+v9.AnimationId = "rbxassetid://125865269944406"
+local v11 = v8:LoadAnimation(v9)
+local v12 = Instance.new("ScreenGui")
+v12.Parent = v3:WaitForChild("PlayerGui")
+local v14 = Instance.new("TextButton")
+v14.Size = UDim2.new(0.1, 0, 0.05, 0)
+v14.Position = UDim2.new(0.4, 0, 0.2, 0)
+v14.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+v14.Text = "gojo banh"
+v14.Parent = v12
+local v20 = Instance.new("TextButton")
+v20.Size = UDim2.new(0.1, 0, 0.05, 0)
+v20.Position = UDim2.new(0.1, 0, 0.8, 0)
+v20.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+v20.Text = "điều khiển banh"
+v20.Parent = v12
+local v26 = Instance.new("Frame")
+v26.Size = UDim2.new(0.3, 0, 0.15, 0)
+v26.Position = UDim2.new(0.35, 0, 0.6, 0)
+v26.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+v26.Visible = false
+v26.Parent = v12
+local v32 = Instance.new("TextLabel")
+v32.Size = UDim2.new(1, 0, 0.3, 0)
+v32.BackgroundTransparency = 1
+v32.Text = "tốc độ banh: 70"
+v32.TextColor3 = Color3.fromRGB(255, 255, 255)
+v32.TextScaled = true
+v32.Parent = v26
+local v39 = Instance.new("Frame")
+v39.Size = UDim2.new(0.9, 0, 0.1, 0)
+v39.Position = UDim2.new(0.05, 0, 0.5, 0)
+v39.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+v39.Parent = v26
+local v44 = Instance.new("Frame")
+v44.Size = UDim2.new(0.05, 0, 1, 0)
+v44.Position = UDim2.new(0.025, 0, 0, 0)
+v44.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+v44.Parent = v39
+local v49 = Instance.new("TextLabel")
+v49.Size = UDim2.new(0.3, 0, 0.1, 0)
+v49.Position = UDim2.new(0.35, 0, 0.85, 0)
+v49.BackgroundTransparency = 1
+v49.Text = "Made by JDarks (vietsub:hatsnowhub)"
+v49.TextColor3 = Color3.fromRGB(255, 255, 255)
+v49.TextScaled = true
+v49.Parent = v12
+v49.Visible = false
+local v58 = false
+local v59 = false
+local v60 = 14
+local v61
+local v62
+local v63
+local v64 = 2.5
+local v65 = 70
+
+local function v66()
+    return workspace:FindFirstChild("Football")
+end
+
+local function v67()
+    if not v61 or v59 then return end
+    v63 = Instance.new("BodyVelocity")
+    v63.Velocity = Vector3.new(0, 25, 0)
+    v63.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    v63.Parent = v61
+    v62 = v1.Heartbeat:Connect(function()
+        if v61 then
+            local MoveDir = v5.MoveDirection
+            if MoveDir.Magnitude > 0 then
+                v61.Position = v61.Position + (MoveDir * v64 / 10)
+            end
+        end
+    end)
+end
+
+v1.Heartbeat:Connect(function()
+    if v58 then
+        if v6.Position.Y < v60 then
+            v6.Velocity = Vector3.new(0, 25, 0)
+        else
+            v6.Velocity = Vector3.new(0, 0, 0)
+        end
+    end
+end)
+
+local function v68()
+    if not v61 then return end
+    if v62 then v62:Disconnect() v62 = nil end
+    if v63 then v63:Destroy() v63 = nil end
+    v7.CameraSubject = v61
+    local BodyVel = Instance.new("BodyVelocity")
+    BodyVel.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    BodyVel.Parent = v61
+    local v76
+    v76 = v1.Heartbeat:Connect(function()
+        if not v59 or not v61 then
+            BodyVel:Destroy()
+            v7.CameraSubject = v4
+            v76:Disconnect()
+            return
+        end
+        BodyVel.Velocity = v7.CFrame.LookVector * v65
+    end)
+end
+
+v14.MouseButton1Click:Connect(function()
+    if v58 then
+        v58 = false
+        v14.Text = "gojo banh"
+        v11:Stop()
+        if v62 then v62:Disconnect() v62 = nil end
+        if v63 then v63:Destroy() v63 = nil end
+    else
+        v58 = true
+        v14.Text = "dừng"
+        v11:Play()
+        v61 = v66()
+        if v61 then v67() end
+    end
+end)
+
+v20.MouseButton1Click:Connect(function()
+    if not v61 then
+        v61 = v66()
+        if not v61 then warn("No Ball Found!") return end
+    end
+    v59 = not v59
+    v20.BackgroundColor3 = v59 and Color3.fromRGB(255, 120, 0) or Color3.fromRGB(0, 255, 0)
+    v26.Visible = v59
+    if v59 then
+        v68()
+    elseif v58 then
+        v67()
+    end
+end)
+
+local v69 = false
+
+v44.InputBegan:Connect(function(v78)
+    if v78.UserInputType == Enum.UserInputType.MouseButton1 or v78.UserInputType == Enum.UserInputType.Touch then
+        v69 = true
+    end
+end)
+
+v2.InputEnded:Connect(function(v79)
+    if v79.UserInputType == Enum.UserInputType.MouseButton1 or v79.UserInputType == Enum.UserInputType.Touch then
+        v69 = false
+    end
+end)
+
+v1.RenderStepped:Connect(function()
+    if v69 then
+        local MouseX = v2:GetMouseLocation().X
+        local MinX = v39.AbsolutePosition.X
+        local MaxX = MinX + v39.AbsoluteSize.X
+        local NewSpeed = math.clamp((MouseX - MinX) / (MaxX - MinX), 0, 1)
+        v44.Position = UDim2.new(NewSpeed - 0.025, 0, 0, 0)
+        v65 = math.floor(10 + (NewSpeed * 90))
+        v32.Text = "tốc độ banh: " .. tostring(v65)
+    end
+end)
+
+v49.Visible = true
+wait(2)
+v49.Visible = false
